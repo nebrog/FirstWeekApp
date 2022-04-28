@@ -15,8 +15,9 @@ public class ServiceExampleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_example);
-        Button button = findViewById(R.id.service);
-        View.OnClickListener clickListener = new View.OnClickListener() {
+        Button buttonStart = findViewById(R.id.service_start);
+        Button buttonStop = findViewById(R.id.service_stop);
+        View.OnClickListener clickListenerStart = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ServiceExampleActivity.this, MyService.class);
@@ -24,6 +25,14 @@ public class ServiceExampleActivity extends AppCompatActivity {
 
             }
         };
-        button.setOnClickListener(clickListener);
+        buttonStart.setOnClickListener(clickListenerStart);
+        View.OnClickListener clickListenerStop = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ServiceExampleActivity.this, MyService.class);
+                stopService(intent);
+            }
+        };
+        buttonStop.setOnClickListener(clickListenerStop);
     }
 }
