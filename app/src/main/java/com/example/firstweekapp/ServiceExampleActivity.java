@@ -1,6 +1,5 @@
 package com.example.firstweekapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ServiceExampleActivity extends AppCompatActivity {
+
+    // создание активити и инициализаця переменных Button
+    // к переменным Button вешается ClickListener
+    // который запускает сервис, либо уничтожает его
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

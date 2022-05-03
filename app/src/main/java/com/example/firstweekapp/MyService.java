@@ -10,7 +10,10 @@ import java.util.concurrent.TimeUnit;
 
 
 public class MyService extends Service {
+    // Сервис используется в таких приложениях как Яндекс.Музыка, Youtube Premium, Spotify
 
+
+    //создание сервиса
     @Override
     public void onCreate() {
         Toast.makeText(this, "Служба запущена",
@@ -18,6 +21,7 @@ public class MyService extends Service {
         super.onCreate();
     }
 
+    // запуск сервиса
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         foo(startId);
@@ -29,6 +33,7 @@ public class MyService extends Service {
         return null;
     }
 
+    //уничтожение сервиса
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -36,7 +41,7 @@ public class MyService extends Service {
                 Toast.LENGTH_SHORT).show();
 
     }
-
+    // создание функции, в которой создается новый поток и живет 5 секунд
     private void foo(int startID) {
         Runnable runnable = new Runnable() {
             @Override

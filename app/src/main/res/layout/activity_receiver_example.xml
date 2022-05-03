@@ -7,10 +7,21 @@
     tools:context=".ReceiverExampleActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уровень заряда батареи"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/battery_level"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <TextView
         android:id="@+id/battery_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#050505"
+        android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/progress_bar"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,8 +37,5 @@
        app:layout_constraintTop_toTopOf="parent"
        app:layout_constraintBottom_toBottomOf="parent"
        />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

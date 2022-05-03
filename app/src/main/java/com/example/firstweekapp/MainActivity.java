@@ -8,13 +8,16 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    // объявление переменных
     private Button serviceButton;
     private Button providerButton;
     private Button receiverButton;
     private Button activityButton;
 
 
-
+    // создание активити и инициализаця кнопок
+    // каждая кнопка открывает выбранный для демонстрации компонент
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
